@@ -31,5 +31,6 @@
             <requiredInput href="#node_0"/>
         </informationRequirement>
     </decision>
-</definitions></definition>
+</definitions>
+</definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

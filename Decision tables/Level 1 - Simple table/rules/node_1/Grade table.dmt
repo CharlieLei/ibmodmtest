@@ -14,7 +14,7 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA['Achievement' is at least <min> and less than <max>]]></Text>
+                        <Text><![CDATA['Achievement' equals <a number>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -30,8 +30,19 @@
             <Partition DefId="C0">
                 <Condition>
                     <Expression>
+                        <Param><![CDATA[-4]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A0">
+                            <Expression>
+                                <Param><![CDATA["E"]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
                         <Param><![CDATA[0]]></Param>
-                        <Param><![CDATA[25]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -44,7 +55,6 @@
                 <Condition>
                     <Expression>
                         <Param><![CDATA[25]]></Param>
-                        <Param><![CDATA[50]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -57,7 +67,6 @@
                 <Condition>
                     <Expression>
                         <Param><![CDATA[50]]></Param>
-                        <Param><![CDATA[75]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -70,7 +79,6 @@
                 <Condition>
                     <Expression>
                         <Param><![CDATA[75]]></Param>
-                        <Param><![CDATA[100]]></Param>
                     </Expression>
                     <ActionSet>
                         <Action DefId="A0">
@@ -85,9 +93,10 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Grade]]></Data>
-            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Achievement]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[128]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[min]]></Data>
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Grade]]></Data>
             <Data Name="Definitions(C0)#Width"><![CDATA[196]]></Data>
         </ResourceSet>
     </Resources>
